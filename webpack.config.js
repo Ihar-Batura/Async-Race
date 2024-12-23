@@ -23,14 +23,14 @@ module.exports = {
       favicon: path.join(__dirname, 'src/assets/race_icon.svg'),
     }),
     new CleanWebpackPlugin(),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/components/view/img'), //путь к папке, где лежат картинки
-          to: path.resolve(__dirname, 'dist/img'), //куда будут копированы
-        },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src/components/assets'), //путь к папке, где лежат картинки
+    //       to: path.resolve(__dirname, 'dist/img'), //куда будут копированы
+    //     },
+    //   ],
+    // }),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
   ],
 
@@ -56,6 +56,7 @@ module.exports = {
     ],
   },
   resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       img: path.join(__dirname, 'src', 'assets', 'img'),
     },

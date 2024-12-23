@@ -1,0 +1,5 @@
+# Ignore all files:
+**/*.html
+**/*.cjs
+**/*.json
+**/*.config.js
