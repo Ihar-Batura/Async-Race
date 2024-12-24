@@ -19,8 +19,16 @@ function createHeader(): HTMLElement {
     classes: ['btn-container'],
     parent: wrapper,
   });
-  createButton({ classes: ['btn'], text: 'Garage', parent: btnsContainer });
-  createButton({ classes: ['btn'], text: 'Winners', parent: btnsContainer });
+  createButton({
+    classes: ['btn', 'garage-btn'],
+    text: 'Garage',
+    parent: btnsContainer,
+  });
+  createButton({
+    classes: ['btn', 'winners-btn'],
+    text: 'Winners',
+    parent: btnsContainer,
+  });
 
   return header;
 }

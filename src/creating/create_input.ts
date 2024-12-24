@@ -3,6 +3,7 @@ type TInputProps = {
   classes?: string[];
   id?: string;
   placeholder?: string;
+  disabled?: boolean;
   minLength?: string;
   onInput?: () => void;
   parent?: HTMLElement;
@@ -13,6 +14,7 @@ function createInput({
   classes,
   id,
   placeholder,
+  disabled,
   minLength,
   onInput,
   parent,
@@ -28,6 +30,9 @@ function createInput({
   }
   if (placeholder) {
     input.setAttribute('placeholder', placeholder);
+  }
+  if (disabled === true) {
+    input.setAttribute('disabled', `${disabled}`);
   }
   if (minLength) {
     input.setAttribute('minlength', minLength);

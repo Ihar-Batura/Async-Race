@@ -58,7 +58,7 @@ body {
 .btn {
   display: block;
   font-family: 'Exo 2', serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.05rem;
   min-width: 100px;
@@ -69,8 +69,22 @@ body {
   cursor: pointer;
 }
 
+.garage-btn,
+.winners-btn {
+  font-size: 18px;
+}
+
 .btn:hover {
   color: var(--clr-main);
+}
+
+.btn:disabled:hover {
+  cursor: default;
+  color: rgba(16, 16, 16, 0.3);
+}
+
+.garage-btn:hover,
+.winners-btn:hover {
   box-shadow: 2px 2px 1px var(--clr-main);
 }
 
@@ -95,4 +109,32 @@ body {
 
 .footer-link:hover {
   text-shadow: 2px 3px 2px var(--clr-main);
+}
+
+.garage-control {
+  width: 400px;
+  margin: 10px auto 0;
+}
+
+.cars-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 35px;
+}
+
+.cars-control__name {
+  width: 200px;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 14px;
+}
+
+.cars-control__color {
+  width: 40px;
+  height: 25px;
+}
+
+.cars-control__btn {
 }
