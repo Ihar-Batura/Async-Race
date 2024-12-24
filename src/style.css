@@ -74,6 +74,10 @@ body {
   box-shadow: 2px 2px 1px var(--clr-main);
 }
 
+.main {
+  min-height: calc(100vh - 100px);
+}
+
 .footer-year {
   color: var(--clr-light);
 }

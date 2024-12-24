@@ -1,4 +1,5 @@
 import createHeader from '../components/header';
+import createMain from '../components/main';
 import createFooter from '../components/footer';
 
 function createHomePage() {
@@ -6,8 +7,9 @@ function createHomePage() {
 
   if (body) {
     const header = createHeader();
+    const main = createMain();
     const footer = createFooter();
-    body.append(header, footer);
+    body.append(header, main, footer);
   }
 }
 
