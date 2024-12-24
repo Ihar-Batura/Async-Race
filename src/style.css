@@ -61,7 +61,6 @@ body {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  min-width: 100px;
   padding: 2px 12px;
   border-radius: 6px;
   border: none;
@@ -72,6 +71,7 @@ body {
 .garage-btn,
 .winners-btn {
   font-size: 18px;
+  min-width: 100px;
 }
 
 .btn:hover {
@@ -136,5 +136,14 @@ body {
   height: 25px;
 }
 
-.cars-control__btn {
+.cars-control .cars-control__btn {
+  width: 108px;
+}
+
+.cars-control__btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 35px;
 }

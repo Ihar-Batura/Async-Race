@@ -1,5 +1,6 @@
 import createElement from '../creating/create_element';
 import createCarsControl from './garage_create_update_car';
+import createControlBtns from './garage_control_btns';
 
 function createControlContainer(): HTMLElement {
   const controlContainer = createElement({
@@ -12,11 +13,12 @@ function createControlContainer(): HTMLElement {
     text: 'Create car',
   });
   const updateCar = createCarsControl({
-    placeholderText: 'Car name',
+    placeholderText: 'Change name',
     disabled: true,
-    text: 'Create car',
+    text: 'Update car',
   });
-  controlContainer.append(createCar, updateCar);
+  const btnsContainer = createControlBtns();
+  controlContainer.append(createCar, updateCar, btnsContainer);
 
   return controlContainer;
 }
