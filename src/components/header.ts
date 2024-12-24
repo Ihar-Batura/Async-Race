@@ -20,7 +20,7 @@ function createHeader(): HTMLElement {
     parent: wrapper,
   });
   createButton({
-    classes: ['btn', 'garage-btn'],
+    classes: ['btn', 'garage-btn', 'active'],
     text: 'Garage',
     parent: btnsContainer,
   });

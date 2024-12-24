@@ -13,7 +13,7 @@ function createControlContainer(): HTMLElement {
     text: 'Create car',
   });
   const updateCar = createCarsControl({
-    placeholderText: 'Change name',
+    placeholderText: 'Change car name',
     disabled: true,
     text: 'Update car',
   });
