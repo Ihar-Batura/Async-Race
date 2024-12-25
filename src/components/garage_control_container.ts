@@ -1,5 +1,5 @@
 import createElement from '../creating/create_element';
-import createCarsControl from './garage_create_update_car';
+import createCarsControl from './garage_control_create_update_car';
 import createControlBtns from './garage_control_btns';
 
 function createControlContainer(): HTMLElement {

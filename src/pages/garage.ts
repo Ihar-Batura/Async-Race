@@ -1,6 +1,7 @@
 import createElement from '../creating/create_element';
 import createControlContainer from '../components/garage_control_container';
 import createPageNavigation from '../components/navigation';
+import createCarItem from '../components/car_item'; //// time
 
 function createGaragePage() {
   const garage = createElement({
@@ -14,8 +15,11 @@ function createGaragePage() {
     classes: ['garage__cars-amount'],
   });
   const navigation = createPageNavigation();
+  const box = createElement({ tag: 'div', classes: ['garage-box'] });
+  const carcontainer = createCarItem({ name: 'Tesla', color: 'red', id: 2 }); //////time
+  box.append(carcontainer); ///////time
 
-  garage.append(control, carsAmount, navigation);
+  garage.append(control, carsAmount, navigation, box);
 
   return garage;
 }

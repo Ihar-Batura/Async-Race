@@ -21,6 +21,12 @@ function createCarItem({ name, color, id }: ICarItem): HTMLElement {
     parent: carManageBtns,
   });
 
+  createElement({
+    tag: 'div',
+    classes: ['finish-img'],
+    parent: carContainer,
+  });
+
   carContainer.append(carManageBtns);
 
   return carContainer;

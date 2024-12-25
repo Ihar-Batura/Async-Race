@@ -25,11 +25,12 @@ function createCarsControl({
     type: 'color',
     classes: ['cars-control__color'],
     disabled: disabled,
+    value: '#4327D3',
     parent: carsControl,
   });
   createButton({
     text: text,
-    classes: ['btn', 'cars-control__btn'],
+    classes: ['btn', 'cars-control__btn', 'btn-color__green'],
     disabled: disabled,
     parent: carsControl,
   });

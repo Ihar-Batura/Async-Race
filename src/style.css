@@ -217,8 +217,15 @@ h3 {
 
 .garage-box {
   width: 100%;
-  margin: 10px auto;
+  min-height: 100vh;
+  margin: 15px auto;
   border: 2px solid wheat;
+}
+
+.car-container {
+  position: relative;
+  height: 75px;
+  border-bottom: 2px dashed var(--clr-light);
 }
 
 .car-item__btns-container {
@@ -226,6 +233,7 @@ h3 {
   height: 36px;
   align-items: center;
   gap: 8px;
+  border: 1px solid yellow;
 }
 
 .car-item__btn {
@@ -262,4 +270,13 @@ h3 {
 
 .car-name {
   color: var(--clr-light);
+}
+
+.finish-img {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  width: 40px;
+  height: 40px;
+  background: url('./assets/finish-flag.svg') center center / contain;
 }
