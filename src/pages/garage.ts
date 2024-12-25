@@ -1,5 +1,6 @@
 import createElement from '../creating/create_element';
 import createControlContainer from '../components/garage_control_container';
+import createPageNavigation from '../components/navigation';
 
 function createGaragePage() {
   const garage = createElement({
@@ -9,16 +10,12 @@ function createGaragePage() {
   const control = createControlContainer();
   const carsAmount = createElement({
     tag: 'h3',
-    text: 'Garage (0)',
+    text: 'Cars in the garage (0)',
     classes: ['garage__cars-amount'],
   });
-  const garagePage = createElement({
-    tag: 'h4',
-    text: 'Page #1',
-    classes: ['garage__cars-page'],
-  });
+  const navigation = createPageNavigation();
 
-  garage.append(control, carsAmount, garagePage);
+  garage.append(control, carsAmount, navigation);
 
   return garage;
 }
