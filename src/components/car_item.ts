@@ -1,25 +1,27 @@
 import createElement from '../creating/create_element';
-import createButton from '../creating/create_btn';
 import createCarItemBtns from './car_item_btns';
+import createCar from '../creating/create_car';
 
 interface ICarItem {
   name: string;
   color: string;
-  id: number;
+  id: string;
 }
 
 function createCarItem({ name, color, id }: ICarItem): HTMLElement {
   const carContainer = createElement({
     tag: 'div',
     classes: ['car-container'],
+    id: id,
   });
   const carManageBtns = createCarItemBtns();
-  const carName = createElement({
+  createElement({
     tag: 'p',
     text: name,
     classes: ['car-name'],
     parent: carManageBtns,
   });
+  const car = createCar(color);
 
   createElement({
     tag: 'div',
@@ -27,7 +29,7 @@ function createCarItem({ name, color, id }: ICarItem): HTMLElement {
     parent: carContainer,
   });
 
-  carContainer.append(carManageBtns);
+  carContainer.append(carManageBtns, car);
 
   return carContainer;
 }

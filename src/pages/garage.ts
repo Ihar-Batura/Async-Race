@@ -16,8 +16,9 @@ function createGaragePage() {
   });
   const navigation = createPageNavigation();
   const box = createElement({ tag: 'div', classes: ['garage-box'] });
-  const carcontainer = createCarItem({ name: 'Tesla', color: 'red', id: 2 }); //////time
-  box.append(carcontainer); ///////time
+  const carcontainer = createCarItem({ name: 'Tesla', color: 'red', id: '7' }); //////time
+  const carcontainer2 = createCarItem({ name: 'BMW', color: 'green', id: '8' }); //////time
+  box.append(carcontainer, carcontainer2); ///////time
 
   garage.append(control, carsAmount, navigation, box);
 
