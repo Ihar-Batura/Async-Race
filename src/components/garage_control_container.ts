@@ -11,11 +11,13 @@ function createControlContainer(): HTMLElement {
     placeholderText: 'Car name',
     disabled: false,
     text: 'Create car',
+    id: 'create-car-',
   });
   const updateCar = createCarsControl({
     placeholderText: 'Change car name',
     disabled: true,
     text: 'Update car',
+    id: 'update-car-',
   });
   const btnsContainer = createControlBtns();
   controlContainer.append(createCar, updateCar, btnsContainer);
