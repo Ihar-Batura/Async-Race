@@ -1,7 +1,7 @@
 import createElement from '../creating/create_element';
 import createInput from '../creating/create_input';
 import createButton from '../creating/create_btn';
-import isValidInput from '../utils/input/is_valid_input';
+import isValidInput from '../functional/input/is_valid_input';
 
 interface ICarControl {
   placeholderText: string;

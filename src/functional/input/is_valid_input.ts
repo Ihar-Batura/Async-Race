@@ -6,7 +6,6 @@ function isValidInput(id: string): void {
 
   if (input && btn) {
     const inputLength: number = input.value.length;
-    console.log(inputLength);
 
     if (inputLength > 0) {
       btn.removeAttribute('disabled');
