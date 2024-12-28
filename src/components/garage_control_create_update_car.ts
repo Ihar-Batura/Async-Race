@@ -2,6 +2,7 @@ import createElement from '../creating/create_element';
 import createInput from '../creating/create_input';
 import createButton from '../creating/create_btn';
 import isValidInput from '../functional/input/is_valid_input';
+import createNewCar from '../functional/car/create_one_new_car';
 
 interface ICarControl {
   placeholderText: string;
@@ -39,6 +40,7 @@ function createCarsControl({
     classes: ['btn', 'cars-control__btn', 'btn-color__green'],
     id: id + 'btn',
     disabled: disabled,
+    onClick: () => createNewCar(id),
     parent: carsControl,
   });
 

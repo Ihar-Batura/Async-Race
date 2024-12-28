@@ -10,6 +10,8 @@ function addCarsToGaragePageFromDB(arrCarsData: ICarsData[]): void {
   const garageBox: HTMLDivElement | null =
     document.querySelector('.garage-box');
   if (garageBox) {
+    garageBox.innerHTML = '';
+
     arrCarsData.forEach((carData) => {
       const car = createCarItem({
         id: `${carData.id}`,
