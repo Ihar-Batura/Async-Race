@@ -1,4 +1,6 @@
 import cleanPage from '../page/clean_page';
+import changePage from '../page/change_page';
+import updateGaragePage from '../page/update_garage_page';
 
 function clickBtnGarage(): void {
   const btnWinners: HTMLButtonElement | null =
@@ -12,6 +14,8 @@ function clickBtnGarage(): void {
   }
 
   cleanPage();
+  changePage('garage');
+  updateGaragePage();
 }
 
 export default clickBtnGarage;
