@@ -218,13 +218,12 @@ h3 {
   width: 100%;
   min-height: 100vh;
   margin: 15px auto;
-  border: 2px solid wheat;
 }
 
 .car-container {
   position: relative;
   height: 75px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   border-bottom: 2px dashed var(--clr-light);
 }
 
