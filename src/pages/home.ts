@@ -5,6 +5,7 @@ import getGarageData from '../api/garage/get_data';
 import showSumCarsInGarage from '../functional/info/show_sum_cars_in_garage';
 import addCarsToGaragePageFromDB from '../functional/car/add_cars_to_garage_page_from_db';
 import addListenersBtnsOnGaragePage from '../functional/buttons/add_listeners_btns_on_ garage_page';
+import stateBtnsPrevAndNext from '../functional/buttons/state_btns_prev_and_next';
 
 async function createHomePage() {
   const body: HTMLBodyElement | null = document.querySelector('body');
@@ -20,6 +21,7 @@ async function createHomePage() {
   const garageDataFirstPage = await getGarageData('/garage?_page=1&_limit=7');
   addCarsToGaragePageFromDB(garageDataFirstPage);
   addListenersBtnsOnGaragePage();
+  stateBtnsPrevAndNext();
 }
 
 export default createHomePage;
