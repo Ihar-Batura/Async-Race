@@ -6,6 +6,8 @@ function createPageNavigation() {
   createButton({
     text: 'Prev',
     classes: ['btn', 'navigation-btn', 'prev-btn'],
+    id: 'btn-prev',
+    disabled: true,
     parent: navigation,
   });
 
@@ -19,6 +21,7 @@ function createPageNavigation() {
   createButton({
     text: 'Next',
     classes: ['btn', 'navigation-btn', 'next-btn'],
+    id: 'btn-next',
     parent: navigation,
   });
 
