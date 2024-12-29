@@ -3,6 +3,7 @@ import createInput from '../creating/create_input';
 import createButton from '../creating/create_btn';
 import isValidInput from '../functional/input/is_valid_input';
 import createNewCar from '../functional/car/create_one_new_car';
+import updateCar from '../functional/car/update_car';
 
 interface ICarControl {
   placeholderText: string;
@@ -18,6 +19,7 @@ function createCarsControl({
   id,
 }: ICarControl): HTMLElement {
   const carsControl = createElement({ tag: 'div', classes: ['cars-control'] });
+  const isCreateBtn: boolean = text === 'Create car';
   createInput({
     type: 'text',
     classes: ['cars-control__name'],
@@ -40,7 +42,7 @@ function createCarsControl({
     classes: ['btn', 'cars-control__btn', 'btn-color__green'],
     id: id + 'btn',
     disabled: disabled,
-    onClick: () => createNewCar(id),
+    onClick: () => (isCreateBtn ? createNewCar(id) : updateCar()),
     parent: carsControl,
   });
 
