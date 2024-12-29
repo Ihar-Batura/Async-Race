@@ -1,5 +1,6 @@
 import createElement from '../creating/create_element';
 import createButton from '../creating/create_btn';
+import createOneHundredRandomCars from '../functional/car/create_one_hundred_cars';
 
 function createControlBtns(): HTMLElement {
   const btnsContainer = createElement({
@@ -18,7 +19,9 @@ function createControlBtns(): HTMLElement {
   });
   createButton({
     classes: ['btn', 'cars-control__btn', 'btn-color__green'],
+    id: 'btn-random-cars',
     text: 'Generate 100 random cars',
+    onClick: () => createOneHundredRandomCars(),
     parent: btnsContainer,
   });
 
