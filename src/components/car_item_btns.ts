@@ -12,6 +12,7 @@ function createCarItemBtns() {
   });
   createButton({
     classes: ['car-item__btn', 'car-item__btn-return'],
+    disabled: true,
     parent: carItemBtnsContainer,
   });
   createButton({
