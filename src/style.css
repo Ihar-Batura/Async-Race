@@ -5,6 +5,7 @@
   --clr-main: rgb(183, 7, 7);
   --clr-special: #f9e070;
   --clr-btn-green: #4f9268;
+  --clr-btn-disabled: rgba(239, 239, 239, 0.3);
 }
 
 * {
@@ -247,6 +248,7 @@ h3 {
 
 .car-item__btn[disabled] {
   cursor: default;
+  background-color: var(--clr-btn-disabled);
 }
 
 .car-item__btn-start {
@@ -276,6 +278,7 @@ h3 {
 .car {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 90px;
   height: 35px;
   overflow: hidden;
