@@ -1,3 +1,4 @@
+import makeCarMove from '../../functional/car/make_car_move';
 import switchCarEngine from './switch_engine_car';
 
 async function startCarEngine(id: string) {
@@ -10,9 +11,12 @@ async function startCarEngine(id: string) {
       },
     });
     const data = await result.json();
-    const time: number = Math.trunc(data.distance / data.velocity);
+    const carTime: number = Math.trunc(data.distance / data.velocity);
+    const time: number = +(carTime / 1000).toFixed(2);
+    console.log('time', time);
 
-    switchCarEngine(id, time);
+    makeCarMove(id, carTime);
+    switchCarEngine(id);
   } catch (error) {
     console.log('Error', error);
   }
