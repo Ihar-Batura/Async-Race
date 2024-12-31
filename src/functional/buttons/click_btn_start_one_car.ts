@@ -1,4 +1,5 @@
 import startCarEngine from '../../api/engine/start_engine';
+import changeDisabledChildElement from '../element/change_disabled_child_element';
 
 function clickBtnStartOneCar(): void {
   const startBtnsList: NodeListOf<Element> = document.querySelectorAll(
@@ -15,6 +16,7 @@ function clickBtnStartOneCar(): void {
             startCarEngine(parentId);
 
             btn.setAttribute('disabled', 'true');
+            changeDisabledChildElement(parentId, 'car-item__btn-return', false);
           }
         }
       });
