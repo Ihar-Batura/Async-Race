@@ -1,12 +1,12 @@
 import deleteCarFromDB from '../../api/garage/delete_car';
 
 function clickBtnDeleteCar(): void {
-  const settingBtnsList: NodeListOf<Element> = document.querySelectorAll(
+  const deleteBtnsList: NodeListOf<Element> = document.querySelectorAll(
     '.car-item__btn-delete'
   );
 
-  if (settingBtnsList.length > 0) {
-    settingBtnsList.forEach((btn) => {
+  if (deleteBtnsList.length > 0) {
+    deleteBtnsList.forEach((btn) => {
       btn.addEventListener('click', function (event: Event) {
         if (event) {
           if (event.target) {
