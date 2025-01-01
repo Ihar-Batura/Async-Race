@@ -7,6 +7,11 @@ async function switchCarEngine(id: string) {
         'Content-Type': 'application/json',
       },
     });
+    if (result.status === 500) {
+      return false;
+    } else {
+      return true;
+    }
   } catch (error) {
     console.log('Error', error);
   }
