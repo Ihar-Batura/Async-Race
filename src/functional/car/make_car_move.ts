@@ -1,6 +1,7 @@
 import findRoadWidth from '../info/find_road_width';
+import switchCarEngine from '../../api/engine/switch_engine_car';
 
-function makeCarMove(id: string, time: number) {
+async function makeCarMove(id: string, time: number) {
   const roadWidth: number = findRoadWidth();
   const carElementLength: number = 100;
   const carRoad: number = roadWidth - carElementLength;
@@ -10,14 +11,20 @@ function makeCarMove(id: string, time: number) {
   if (carContainer) {
     const car: HTMLDivElement | null = carContainer.querySelector('.car');
     if (car) {
+      let isCarDrive: boolean | undefined = true;
+
       const animateCar = function () {
         const carPosition: number = +car.style.left.replace(/\D/g, '');
         if (carPosition < carRoad) {
           car.style.left = `${carPosition + oneCarStep}px`;
-          requestAnimationFrame(animateCar);
+          if (isCarDrive === true) {
+            requestAnimationFrame(animateCar);
+          }
         }
       };
+
       requestAnimationFrame(animateCar);
+      isCarDrive = await switchCarEngine(id);
     }
   }
 }
