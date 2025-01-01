@@ -1,5 +1,4 @@
 import makeCarMove from '../../functional/car/make_car_move';
-import switchCarEngine from './switch_engine_car';
 
 async function startCarEngine(id: string) {
   const url: string = `http://127.0.0.1:3000/engine?id=${id}&status=started`;
@@ -16,7 +15,6 @@ async function startCarEngine(id: string) {
     console.log('time', time);
 
     makeCarMove(id, carTime);
-    switchCarEngine(id);
   } catch (error) {
     console.log('Error', error);
   }
