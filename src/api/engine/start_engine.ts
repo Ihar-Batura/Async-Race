@@ -12,7 +12,6 @@ async function startCarEngine(id: string) {
     const data = await result.json();
     const carTime: number = Math.trunc(data.distance / data.velocity);
     const time: number = +(carTime / 1000).toFixed(2);
-    console.log('time', time);
 
     makeCarMove(id, carTime);
   } catch (error) {
