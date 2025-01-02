@@ -1,4 +1,5 @@
 import createElement from '../../creating/create_element';
+import saveWinnerResult from '../data/save_winner_result';
 
 function showFasterCar(id: string, time: number) {
   const finishTime: number = +(time / 1000).toFixed(2);
@@ -19,6 +20,7 @@ function showFasterCar(id: string, time: number) {
         text: `Winner: ${carName.innerText} ${finishTime}s`,
         parent: garageBox,
       });
+      saveWinnerResult(id, finishTime);
     }
   }
 }
