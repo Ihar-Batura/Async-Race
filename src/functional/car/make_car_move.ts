@@ -1,5 +1,6 @@
 import findRoadWidth from '../info/find_road_width';
 import switchCarEngine from '../../api/engine/switch_engine_car';
+import showFasterCar from '../info/show_faster_car';
 
 async function makeCarMove(id: string, time: number) {
   const roadWidth: number = findRoadWidth();
@@ -20,6 +21,9 @@ async function makeCarMove(id: string, time: number) {
           if (isCarDrive === true) {
             requestAnimationFrame(animateCar);
           }
+        }
+        if (carPosition >= carRoad) {
+          showFasterCar(id, time);
         }
       };
 
