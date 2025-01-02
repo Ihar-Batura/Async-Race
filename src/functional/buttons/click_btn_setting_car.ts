@@ -14,7 +14,7 @@ function clickBtnSettingCar(): void {
           if (event.target) {
             const parent = (event.target as HTMLButtonElement).offsetParent;
             const parentId: string = (parent as HTMLDivElement).id;
-            console.log(parentId);
+
             changeDisabledUpdateCarElements(false);
             saveCarIdInUpdateBtn(parentId);
             fillUpdateCarInputsInfo(parentId);
