@@ -2,6 +2,7 @@ import createElement from '../creating/create_element';
 import createButton from '../creating/create_btn';
 import createOneHundredRandomCars from '../functional/car/create_one_hundred_cars';
 import clickBtnRace from '../functional/buttons/click_btn_race';
+import clickBtnReset from '../functional/buttons/click_btn_reset';
 
 function createControlBtns(): HTMLElement {
   const btnsContainer = createElement({
@@ -20,6 +21,7 @@ function createControlBtns(): HTMLElement {
     id: 'btn-reset',
     text: 'Reset',
     disabled: true,
+    onClick: () => clickBtnReset(),
     parent: btnsContainer,
   });
   createButton({
