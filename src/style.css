@@ -220,6 +220,7 @@ h3 {
 }
 
 .garage-box {
+  position: relative;
   width: 100%;
   margin: 15px auto;
 }
@@ -297,4 +298,15 @@ h3 {
   width: 40px;
   height: 40px;
   background: url('./assets/finish-flag.svg') center center / contain;
+}
+
+#winner-car {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  letter-spacing: 0.03rem;
+  color: var(--clr-special);
+  text-shadow: 2px 3px 2px var(--clr-main);
 }
