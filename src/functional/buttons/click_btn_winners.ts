@@ -1,4 +1,5 @@
 import cleanPage from '../page/clean_page';
+import changePage from '../page/change_page';
 
 function clickBtnWinners(): void {
   const btnWinners: HTMLButtonElement | null =
@@ -12,6 +13,7 @@ function clickBtnWinners(): void {
   }
 
   cleanPage();
+  changePage('winners');
 }
 
 export default clickBtnWinners;

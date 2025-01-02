@@ -310,3 +310,9 @@ h3 {
   color: var(--clr-special);
   text-shadow: 2px 3px 2px var(--clr-main);
 }
+
+/* Winners Page */
+
+.winners__cars-amount {
+  margin: 15px auto;
+}
