@@ -4,6 +4,7 @@ import addCarsToGaragePageFromDB from '../car/add_cars_to_garage_page_from_db';
 import addListenersBtnsOnGaragePage from './add_listeners_btns_on_ garage_page';
 import stateBtnsPrevAndNext from './state_btns_prev_and_next';
 import changePageNumber from '../info/change_page_number';
+import changeDisabledElementById from '../element/change_disabled_element_by_id';
 
 async function prevPage() {
   const pageNumber = whatPageNumber();
@@ -14,6 +15,8 @@ async function prevPage() {
   addListenersBtnsOnGaragePage();
   changePageNumber(pageNumber, '-');
   stateBtnsPrevAndNext();
+  changeDisabledElementById('btn-reset', true);
+  changeDisabledElementById('btn-race', false);
 }
 
 export default prevPage;
