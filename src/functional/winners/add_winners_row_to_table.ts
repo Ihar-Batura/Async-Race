@@ -12,7 +12,8 @@ async function addWinnersRowToTable(
   arrWinners: IArrWinners[]
 ) {
   const tableBody: HTMLElement | null = document.querySelector('.table-body');
-  const startRowNumber: number = +pageNumber;
+  const startRowNumber: number =
+    +pageNumber > 1 ? (+pageNumber - 1) * 10 + 1 : +pageNumber;
 
   for (let i = 0; i < arrWinners.length; i += 1) {
     const carId: number = arrWinners[i].id;
