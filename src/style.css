@@ -316,3 +316,30 @@ h3 {
 .winners__cars-amount {
   margin: 15px auto;
 }
+
+.table-cell {
+  position: relative;
+  height: 30px;
+  padding: 5px 10px;
+  text-align: center;
+  color: var(--clr-light);
+}
+
+.table-wins,
+.table-record {
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+.table-wins:hover,
+.table-record:hover {
+  color: var(--clr-special);
+}
+
+.table-car svg {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
