@@ -11,7 +11,8 @@ async function updateGaragePage() {
   );
   addCarsToGaragePageFromDB(garageThisPageData);
   const garageData = await getGarageData('/garage');
-  showSumCarsInGarage(garageData.length);
+  const carsInGarage: number = garageData.length > 0 ? garageData.length : 0;
+  showSumCarsInGarage(carsInGarage);
   addListenersBtnsOnGaragePage();
 }
 
