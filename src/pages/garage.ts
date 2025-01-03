@@ -1,7 +1,6 @@
 import createElement from '../creating/create_element';
 import createControlContainer from '../components/garage_control_container';
 import createPageNavigation from '../components/navigation';
-import getGarageData from '../api/garage/get_data';
 
 function createGaragePage() {
   const garage = createElement({
@@ -16,7 +15,6 @@ function createGaragePage() {
   });
   const navigation = createPageNavigation();
   const box = createElement({ tag: 'div', classes: ['garage-box'] });
-  getGarageData('/garage');
 
   garage.append(control, carsAmount, navigation, box);
 
