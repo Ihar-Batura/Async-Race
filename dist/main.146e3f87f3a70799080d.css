@@ -1,0 +1,346 @@
+:root {
+  /* colors */
+  --clr-light: white;
+  --clr-background: #291b1b;
+  --clr-main: rgb(183, 7, 7);
+  --clr-special: #f9e070;
+  --clr-btn-green: #4f9268;
+  --clr-btn-disabled: rgba(239, 239, 239, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-background);
+}
+
+.header,
+.footer {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  background: url(79bf3ab2621b162b2b29.png) center center / cover;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.main .wrapper {
+  flex-direction: column;
+}
+
+.logo {
+  display: inline-block;
+  font-family: 'Exo 2', serif;
+  font-size: 26px;
+  letter-spacing: 0.05rem;
+  margin: 0;
+  color: var(--clr-light);
+  text-shadow: 2px 3px 2px var(--clr-main);
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  display: block;
+  font-family: 'Exo 2', serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  padding: 2px 12px;
+  border-radius: 4px;
+  border: none;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+.garage-btn,
+.winners-btn {
+  font-size: 18px;
+  min-width: 100px;
+}
+
+.garage-btn:hover,
+.winners-btn:hover {
+  color: var(--clr-main);
+}
+
+.garage-btn.active,
+.winners-btn.active {
+  background-color: var(--clr-special);
+  color: var(--clr-main);
+  box-shadow: 2px 2px 1px var(--clr-main);
+}
+
+.btn:disabled:hover {
+  cursor: default;
+  color: rgba(16, 16, 16, 0.3);
+}
+
+.btn-color__green:not([disabled]) {
+  background-color: var(--clr-btn-green);
+}
+
+.btn-color__green:not([disabled]):hover {
+  background-color: var(--clr-special);
+}
+
+.btn-color__red:not([disabled]) {
+  background-color: var(--clr-main);
+}
+
+.btn-color__red:not([disabled]):hover {
+  background-color: var(--clr-special);
+}
+
+.navigation-btn:not([disabled]):hover {
+  background-color: var(--clr-special);
+}
+
+.garage-btn:hover,
+.winners-btn:hover {
+  box-shadow: 2px 2px 1px var(--clr-main);
+}
+
+.main {
+  min-height: calc(100vh - 80px);
+}
+
+.footer-year {
+  color: var(--clr-light);
+}
+
+.footer-link {
+  font-family: 'Exo 2', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  color: var(--clr-light);
+  text-decoration: none;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  text-shadow: 2px 3px 2px var(--clr-main);
+}
+
+.garage-control {
+  width: 400px;
+  margin: 10px auto 0;
+}
+
+.cars-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 35px;
+}
+
+.cars-control__name {
+  width: 200px;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 14px;
+}
+
+.cars-control__color {
+  width: 40px;
+  height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cars-control__color[disabled] {
+  cursor: default;
+}
+
+.cars-control .cars-control__btn {
+  width: 108px;
+}
+
+.cars-control__btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 35px;
+}
+
+h3 {
+  font-size: 17px;
+  letter-spacing: 0.03rem;
+  color: var(--clr-light);
+}
+
+.garage__cars-amount {
+  margin-left: auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+
+.navigation-btn {
+  font-size: 13px;
+}
+
+.page-number {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: var(--clr-light);
+}
+
+.garage-box {
+  position: relative;
+  width: 100%;
+  margin: 15px auto;
+}
+
+.car-container {
+  position: relative;
+  height: 75px;
+  margin-bottom: 6px;
+  border-bottom: 2px dashed var(--clr-light);
+}
+
+.car-item__btns-container {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  gap: 8px;
+}
+
+.car-item__btn {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.car-item__btn[disabled] {
+  cursor: default;
+  background-color: var(--clr-btn-disabled);
+}
+
+.car-item__btn-start {
+  background: url(0093e5c9742805e7cb37.svg) center center / contain;
+  background-color: var(--clr-btn-green);
+}
+
+.car-item__btn-return {
+  background: url(30cd84f97e930504a14a.svg) center center / contain;
+  background-color: var(--clr-main);
+}
+
+.car-item__btn-change {
+  background: url(9d69fb348529f84d1c00.svg) center center / contain;
+  background-color: var(--clr-btn-green);
+}
+
+.car-item__btn-delete {
+  background: url(ae4cb83b18a40a7e620b.svg) center center / contain;
+  background-color: var(--clr-main);
+}
+
+.car-name {
+  color: var(--clr-light);
+}
+
+.car {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90px;
+  height: 35px;
+  overflow: hidden;
+}
+
+.car svg {
+  position: absolute;
+  height: 80px;
+  top: -24px;
+}
+
+.finish-img {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  width: 40px;
+  height: 40px;
+  background: url(ae60f77b5140aaff496e.svg) center center / contain;
+}
+
+#winner-car {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  letter-spacing: 0.03rem;
+  color: var(--clr-special);
+  text-shadow: 2px 3px 2px var(--clr-main);
+}
+
+/* Winners Page */
+
+.winners__cars-amount {
+  margin: 15px auto;
+}
+
+.table-cell {
+  position: relative;
+  height: 30px;
+  padding: 5px 10px;
+  text-align: center;
+  color: var(--clr-light);
+}
+
+.table-wins,
+.table-record {
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+.table-wins:hover,
+.table-record:hover {
+  color: var(--clr-special);
+}
+
+.table-car svg {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
