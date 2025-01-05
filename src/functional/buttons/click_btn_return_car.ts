@@ -1,5 +1,4 @@
 import changeDisabledChildElement from '../element/change_disabled_child_element';
-import returnCarOnStart from '../car/return_car_on_start';
 
 function clickBtnReturnCar(): void {
   const returnBtnsList: NodeListOf<Element> = document.querySelectorAll(
@@ -16,7 +15,6 @@ function clickBtnReturnCar(): void {
 
             btn.setAttribute('disabled', 'true');
             changeDisabledChildElement(parentId, 'car-item__btn-start', false);
-            returnCarOnStart(parentId);
           }
         }
       });
