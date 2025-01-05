@@ -13,7 +13,6 @@ function clickBtnReset() {
 
   if (carsList.length > 0) {
     carsList.forEach((car) => {
-      returnCarOnStart(car.id);
       changeDisabledChildElement(car.id, 'car-item__btn-start', false);
       changeDisabledChildElement(car.id, 'car-item__btn-return', true);
     });

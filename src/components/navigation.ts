@@ -24,6 +24,7 @@ function createPageNavigation() {
   createButton({
     text: 'Next',
     classes: ['btn', 'navigation-btn', 'next-btn'],
+    disabled: true,
     id: 'btn-next',
     onClick: () => nextPage(),
     parent: navigation,
